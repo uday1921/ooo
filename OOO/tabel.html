@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" />
+<link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<link rel="stylesheet" href="./tstyle.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<br>
+				 <label for="" class="col-sm-1 form-control-label"></label>
+                <select class="selectpicker" id="Deaprtment" data-live-search="true">
+				 <option value="department"><h1>Department</h1></option>
+                <option value="cse">CSE</option>
+				<option value="ece">ECE</option>
+				<option value="eee">EEE</option>
+				<option value="MECH">MECH</option>
+				<option value="CIVIL">CIVIL</option>
+				<option value="MINING">MINING</option>
+                </select>
+				<select class="selectpicker" id="year" data-live-search="true">
+				<option value="year">year</option>
+				
+                <option value="I">I</option>
+				<option value="II">II</option>
+				<option value="III">III</option>
+				<option value="IV">IV</option>
+                </select>
+				<select class="selectpicker" id="section" data-live-search="true">
+				<option value="section">section</option>
+                <option value="A">A</option>
+				<option value="B">B</option>
+				<option value="C">C</option>
+				<option value="d">D</option>
+                </select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<button type="button" class="btn btn-primary active" value="Primary" id=detailb onclick='disptab();'>submit</button> 
+			<div class='tabl'>
+			<br><br>
+			
+			<div class="container" id='tabdetail'>
+  
+  <div id="table" class="table-editable">
+    <span class="table-add glyphicon glyphicon-plus"></span>
+    <table class="table">
+      <tr>
+        <th>fn</th>
+        <th>sub</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td contenteditable="true">undefined</td>
+        <td contenteditable="true">undefined</td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr>
+      <!-- This is our clonable table line -->
+      <tr class="hide">
+        <td contenteditable="true">undefined</td>
+        <td contenteditable="true">undefined</td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <div style="padding-left:510px"><button id="export-btn" class="btn btn-primary alig">Export Data</button></div>
+  <p id="export"></p>
+</div>
+			
+			
+			
+			</div>
+
+<!-- partial -->
+<script  src="./tscript.js"></script>
+<script>
+$(function() {
+  $('.selectpicker').selectpicker();
+});
+function disptab()
+{
+	document.getElementById('tabdetail').style.display='inline';
+	document.getElementById('tabdetail').style.height='100px'
+	document.getElementById('tabdetail').style.width='100px'
+	//console.log(document.getElementById('tabdetail'));
+}
+</script>
+
+</body>
+</html>
